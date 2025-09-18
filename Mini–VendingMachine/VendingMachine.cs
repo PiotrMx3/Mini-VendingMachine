@@ -11,9 +11,9 @@ namespace Mini_VendingMachine
     {
 		private List<Product> _allProducts = [];		
 
-		public List<Product> AllProducts
+		public ImmutableList<Product> AllProducts
 		{
-			get { return _allProducts; }
+			get { return _allProducts.ToImmutableList(); }
 		}
 
 		public void RegisterProduct(Product p)
